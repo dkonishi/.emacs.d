@@ -50,7 +50,7 @@
 
 (use-package neotree
   :defer t
-  :bind ("C-c p n" . neotree)
+  :bind ("<f8>" . neotree-toggle)
   :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (use-package projectile
@@ -94,6 +94,9 @@
 
 ;; Indent with spaces only
 (setq-default indent-tabs-mode nil)
+
+;; Font size
+(set-face-attribute 'default nil :height 90)
 
 ;; Enable windmove
 (windmove-default-keybindings)
