@@ -50,8 +50,8 @@
 
 (use-package neotree
   :defer t
-  :bind ("<f8>" . neotree-toggle)
-  :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
+  :bind ("<f8>" . neotree-toggle))
+  ;; :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (use-package projectile
   :defer t
