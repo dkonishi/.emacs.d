@@ -96,7 +96,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Font size
-(set-face-attribute 'default nil :height 90)
+;; (set-face-attribute 'default (selected-frame) :height 100)
 
 ;; Enable windmove
 (windmove-default-keybindings)
