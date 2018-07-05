@@ -20,6 +20,8 @@
 
 (use-package clojure-mode)
 
+(use-package flycheck-joker)
+
 (use-package paredit
   :config
   (add-hook 'clojure-mode-hook #'paredit-mode))
