@@ -64,5 +64,7 @@
   (add-hook 'neo-change-root-hook #'neotree-resize-window)
   (add-hook 'neo-enter-hook #'neotree-resize-window)
 
+(setq ring-bell-function 'ignore)
+
 (provide 'init)
 ;;; init.el ends here
