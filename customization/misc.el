@@ -151,5 +151,12 @@
     (setq-default eshell-path-env path-from-shell) ; for eshell users
     (setq exec-path (split-string path-from-shell path-separator))))
 
+(defun top-join-line ()
+    "Join the current line with the line beneath it."
+      (interactive)
+        (delete-indentation 1))
+
+(global-set-key (kbd "C-x C-j") 'top-join-line)
+
 (provide 'misc)
 ;;; misc.el ends here
