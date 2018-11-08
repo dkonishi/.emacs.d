@@ -49,22 +49,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-(set-face-attribute 'default (selected-frame) :height 100)
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(defun neotree-resize-window (&rest _args)
-      "Resize neotree window.
-  https://github.com/jaypei/emacs-neotree/pull/110"
-      (interactive)
-          (neo-buffer--with-resizable-window
-                 (let ((fit-window-to-buffer-horizontally t))
-                          (fit-window-to-buffer))))
-
-  (add-hook 'neo-change-root-hook #'neotree-resize-window)
-  (add-hook 'neo-enter-hook #'neotree-resize-window)
-
-(setq ring-bell-function 'ignore)
+(set-face-attribute 'default (selected-frame) :height 110)
 
 (provide 'init)
 ;;; init.el ends here

@@ -111,6 +111,8 @@
 
 (setq explicit-shell-file-name "/bin/bash")
 
+(setq ring-bell-function 'ignore)
+
 (defun rename-current-buffer-file ()
   "Renames current buffer and file it is visiting."
   (interactive)
@@ -156,7 +158,23 @@
       (interactive)
         (delete-indentation 1))
 
+(defun neotree-resize-window (&rest _args)
+  "Resize neotree window.
+  https://github.com/jaypei/emacs-neotree/pull/110"
+  (interactive)
+  (neo-buffer--with-resizable-window
+   (let ((fit-window-to-buffer-horizontally t))
+     (fit-window-to-buffer))))
+
+
 (global-set-key (kbd "C-x C-j") 'top-join-line)
+
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'neo-change-root-hook #'neotree-resize-window)
+(add-hook 'neo-enter-hook #'neotree-resize-window)
 
 (provide 'misc)
 ;;; misc.el ends here
