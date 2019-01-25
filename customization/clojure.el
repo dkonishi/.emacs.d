@@ -26,9 +26,14 @@
   :config
   (add-hook 'clojure-mode-hook #'paredit-mode))
 
-(set-variable 'clojure-indent-style :align-arguments)
+;; (set-variable 'clojure-indent-style :align-arguments)
+
+;; Midje facts.
+(put-clojure-indent 'fact 1)
+(put-clojure-indent 'facts 1)
 
 (defun cider-with-repl-profile ()
+  "Start repl with profile."
   (interactive)
   (letrec ((profile (read-string "Enter profile name: "))
            (lein-params (concat "with-profile +" profile " repl :headless")))
