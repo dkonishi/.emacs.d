@@ -154,9 +154,9 @@
     (setq exec-path (split-string path-from-shell path-separator))))
 
 (defun top-join-line ()
-    "Join the current line with the line beneath it."
-      (interactive)
-        (delete-indentation 1))
+  "Join the current line with the line beneath it."
+  (interactive)
+  (delete-indentation 1))
 
 (defun neotree-resize-window (&rest _args)
   "Resize neotree window: https://github.com/jaypei/emacs-neotree/pull/110."

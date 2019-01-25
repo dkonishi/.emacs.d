@@ -26,9 +26,11 @@
   (interactive)
   (if window-system
       (progn
+        (set-frame-parameter frame 'fullscreen 'maximized)
+
         (if (> (x-display-pixel-width) 1900)
-            (set-frame-parameter frame 'font "Hack 11")
-          (set-frame-parameter frame 'font "Hack 14")))))
+            (set-frame-parameter frame 'font "Hack 11" )
+          (set-frame-parameter frame 'font "Hack 11")))))
 (fontify-frame nil)
 (push 'fontify-frame after-make-frame-functions)
 

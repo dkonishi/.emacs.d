@@ -51,7 +51,8 @@
  ;; If there is more than one, they won't work right.
  )
 
-(set-face-attribute 'default (selected-frame) :height 110)
+;; (set-face-attribute 'default (selected-frame) :height 110)
+
 
 (provide 'init)
 ;;; init.el ends here
