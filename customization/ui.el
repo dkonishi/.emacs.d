@@ -37,6 +37,9 @@
 ;; Remove scroll bar
 (scroll-bar-mode -1)
 
+;; Alternate between frames
+(global-set-key (kbd "M-n") 'other-frame) ; Alt+n
+
 ;; Remove top bar
 (menu-bar-mode -1)
 (tool-bar-mode -1)
