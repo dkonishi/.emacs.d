@@ -31,6 +31,8 @@
 ;; Midje facts.
 (put-clojure-indent 'fact 1)
 (put-clojure-indent 'facts 1)
+(put-clojure-indent 'flow 1)
+(put-clojure-indent 'provided 0)
 
 (defun cider-with-repl-profile ()
   "Start repl with profile."
@@ -42,5 +44,4 @@
     (cider-jack-in ())))
 
 (provide 'clojure)
-
 ;;; clojure.el ends here

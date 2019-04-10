@@ -1,4 +1,4 @@
-;;; package --- Summary
+;;; Package --- summary
 
 ;;; Commentary:
 
@@ -29,8 +29,8 @@
         (set-frame-parameter frame 'fullscreen 'maximized)
 
         (if (> (x-display-pixel-width) 1900)
-            (set-frame-parameter frame 'font "Hack 11" )
-          (set-frame-parameter frame 'font "Hack 11")))))
+            (set-frame-parameter frame 'font "Hack 9" )
+          (set-frame-parameter frame 'font "Hack 9")))))
 (fontify-frame nil)
 (push 'fontify-frame after-make-frame-functions)
 
