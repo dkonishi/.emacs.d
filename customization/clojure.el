@@ -30,7 +30,15 @@
 (use-package clojure-mode
   :ensure t
   :config
-  (require 'flycheck-clj-kondo))
+  (require 'flycheck-clj-kondo)
+
+  ;; (set-variable 'clojure-indent-style :align-arguments)
+
+  ;; Midje facts.
+  (put-clojure-indent 'fact 1)
+  (put-clojure-indent 'facts 1)
+  (put-clojure-indent 'flow 1)
+  (put-clojure-indent 'provided 0))
 
 (use-package flycheck-clj-kondo)
 
@@ -38,13 +46,6 @@
   :config
   (add-hook 'clojure-mode-hook #'paredit-mode))
 
-;; (set-variable 'clojure-indent-style :align-arguments)
-
-;; Midje facts.
-(put-clojure-indent 'fact 1)
-(put-clojure-indent 'facts 1)
-(put-clojure-indent 'flow 1)
-(put-clojure-indent 'provided 0)
 
 (defun cider-with-repl-profile ()
   "Start repl with profile."

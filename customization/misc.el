@@ -50,7 +50,7 @@
 
 (use-package neotree
   :defer t
-  :bind ("<f8>" . neotree-toggle))
+  :bind ("C-x t" . neotree-toggle))
   ;; :config (setq neo-theme (if (display-graphic-p) 'icons 'arrow)))
 
 (use-package projectile
@@ -172,6 +172,22 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;; (add-hook 'neo-change-root-hook #'neotree-resize-window)
 ;; (add-hook 'neo-enter-hook #'neotree-resize-window)
+
+(global-set-key (kbd "C-c b") 'set-rectangular-region-anchor)
+
+(use-package multiple-cursors
+  :bind (("C-S-c C-S-c" . mc/edit-lines)
+         ("C->" . mc/mark-next-like-this)
+         ("C-<" . mc/mark-previous-like-this)
+         ("C-c C-<" . mc/mark-all-like-this)))
+
+(use-package yafolding)
+
+(add-hook 'prog-mode-hook
+          (lambda () (yafolding-mode)))
+
+(use-package elscreen
+  :init (elscreen-start))
 
 (provide 'misc)
 ;;; misc.el ends here
