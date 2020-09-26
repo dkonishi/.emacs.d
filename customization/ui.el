@@ -45,4 +45,19 @@
 (tool-bar-mode -1)
 
 (provide 'ui)
+
+(use-package yafolding)
+
+(global-set-key (kbd "s-d y") 'yafolding-discover)
+(add-hook 'prog-mode-hook
+          (lambda () (yafolding-mode)))
+
+;; (use-package centaur-tabs
+;;   :demand
+;;   :config
+;;   (centaur-tabs-mode t))
+
+(use-package elscreen
+  :init (elscreen-start))
+
 ;;; ui.el ends here

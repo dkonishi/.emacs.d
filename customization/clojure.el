@@ -20,7 +20,17 @@
 
 (use-package clojure-mode)
 
-(use-package flycheck-joker)
+;; (use-package flycheck-joker)
+
+;; First install the package:
+(use-package flycheck-clj-kondo
+  :ensure t)
+
+;; then install the checker as soon as `clojure-mode' is loaded
+(use-package clojure-mode
+  :ensure t
+  :config
+  (require 'flycheck-clj-kondo))
 
 (use-package flycheck-clj-kondo)
 
