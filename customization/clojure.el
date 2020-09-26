@@ -22,6 +22,8 @@
 
 (use-package flycheck-joker)
 
+(use-package flycheck-clj-kondo)
+
 (use-package paredit
   :config
   (add-hook 'clojure-mode-hook #'paredit-mode))

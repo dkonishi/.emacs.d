@@ -25,12 +25,12 @@
   "Define the font size based on FRAME resolution."
   (interactive)
   (if window-system
-      (progn
-        (set-frame-parameter frame 'fullscreen 'maximized)
+    (progn
+      (set-frame-parameter frame 'fullscreen 'maximized)
 
-        (if (> (x-display-pixel-width) 1900)
-            (set-frame-parameter frame 'font "Hack 9" )
-          (set-frame-parameter frame 'font "Hack 9")))))
+      (if (> (x-display-pixel-width) 1900)
+        (set-frame-parameter frame 'font "Hack 10" )
+        (set-frame-parameter frame 'font "Hack 10")))))
 (fontify-frame nil)
 (push 'fontify-frame after-make-frame-functions)
 
