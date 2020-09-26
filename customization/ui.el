@@ -48,7 +48,6 @@
 
 (use-package yafolding)
 
-(global-set-key (kbd "s-d y") 'yafolding-discover)
 (add-hook 'prog-mode-hook
           (lambda () (yafolding-mode)))
 
